@@ -9,8 +9,11 @@
         <title><%= title %></title>
     </head>
     <body>
+        <h1><%= title %></h1>
+
+        <h2><a href="/form">New message</a></h2>
+
         <% messages.forEach(message => { %> <%- include('components/message',
-        {message: message}) %>
+        {message: message}) %> <% }) %>
     </body>
-    <% }) %>
 </html>
