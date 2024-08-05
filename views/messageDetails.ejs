@@ -6,14 +6,14 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        <title><%= title %></title>
+        <title><%= title %>></title>
     </head>
     <body>
         <h1><%= title %></h1>
+        <p>User: <%= message.user %></p>
+        <p>Added: <%= message.added %></p>
+        <p>Message: <%= message.text %></p>
 
-        <h2><a href="/form">New message</a></h2>
-
-        <% messages.forEach(function(message, id) { %> <%-
-        include('components/message', {message: message, id: id}) %> <% }) %>
+        <a href="/">Back</a>
     </body>
 </html>

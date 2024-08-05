@@ -17,6 +17,19 @@ const messages = [
 app.get('/', (req, res) =>
     res.render('index', { title: 'mini-messageboard', messages: messages })
 );
+
+app.get('/messages/:id', (req, res) => {
+    const message = messages[req.params.id];
+    if (message) {
+        res.render('messageDetails', {
+            title: 'Message Details',
+            message: message,
+        });
+    } else {
+        res.status(404).send('message not found');
+    }
+});
+
 app.get('/form', (req, res) => res.render('form', { title: 'New message' }));
 
 app.post('/new', (req, res) => {
