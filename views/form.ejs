@@ -8,5 +8,30 @@
         />
         <title><%= title %></title>
     </head>
-    <body></body>
+    <body>
+        <h1><%= title %></h1>
+        <!-- form POSTS to /new path -->
+        <form
+            action="/new"
+            method="post"
+        >
+            <label for="user">Username:</label>
+            <input
+                type="text"
+                name="user"
+                id="user"
+            />
+            <label for="text">Message:</label>
+            <input
+                type="text"
+                name="text"
+                id="text"
+            />
+            <!-- Handle added date and time on post (see app.js) -->
+            <input
+                type="submit"
+                value="Post"
+            />
+        </form>
+    </body>
 </html>
