@@ -44,7 +44,9 @@ app.post('/new', (req, res) => {
     });
     res.redirect('/');
 });
-const PORT = 3000;
+
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () =>
     console.log('Express initialized, listening on port ', PORT)
 );
