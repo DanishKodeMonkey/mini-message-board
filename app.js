@@ -1,7 +1,9 @@
 const express = require('express');
 const path = require('node:path');
+const port = process.env.PORT || 3000;
 
 const app = express();
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -45,8 +47,6 @@ app.post('/new', (req, res) => {
     res.redirect('/');
 });
 
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () =>
-    console.log('Express initialized, listening on port ', PORT)
-);
+app.listen(port, () => {
+    console.log(`App listening at http://localhost:${port}`);
+});
