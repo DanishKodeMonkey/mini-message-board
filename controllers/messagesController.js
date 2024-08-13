@@ -15,9 +15,6 @@ exports.messagesListGet = asyncHandler(async (req, res) => {
     const messages = await db.getAllMessages();
     res.render('index', { title: 'mini-messageboard', messages: messages });
 });
-app.get('/', (req, res) =>
-    res.render('index', { title: 'mini-messageboard', messages: messages })
-);
 
 exports.messageGet = asyncHandler(async (req, res) => {
     const messageId = req.params.id;
