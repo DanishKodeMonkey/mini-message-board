@@ -4,13 +4,13 @@ require('dotenv').config();
 const SQL = `
 CREATE TABLE IF NOT EXISTS messages(
 id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY, 
-user VARCHAR(255), 
-message VARCHAR(600);
+username VARCHAR(255), 
+message VARCHAR(600));
 
-INSERT INTO messages (user, message) VALUES 
-('Monkey', 'Hey I am the danish Kode Monkey! I made the first message! WOoo!),
+INSERT INTO messages (username, message) VALUES 
+('Monkey', 'Hey I am the danish Kode Monkey! I made the first message! WOoo!'),
 ('Brick', 'I am a brick, I stand tall and topple hardly'), 
-('Weave', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit deserunt, iste voluptates maiores consequuntur at magnam id facere eius harum totam ex commodi rerum voluptatibus unde quas nam minus.')
+('Weave', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae odit deserunt, iste voluptates maiores consequuntur at magnam id facere eius harum totam ex commodi rerum voluptatibus unde quas nam minus.');
 `;
 
 async function main() {
