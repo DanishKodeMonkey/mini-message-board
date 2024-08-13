@@ -10,3 +10,5 @@ messagesRouter.get('/messages/:id', messagesController.messageGet);
 /* Create */
 messagesRouter.get('/new', messagesController.messagesCreateGet);
 messagesRouter.post('new', messagesController.messagesCreatePost);
+
+module.exports = messagesRouter;
