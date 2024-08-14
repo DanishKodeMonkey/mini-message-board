@@ -5,10 +5,10 @@ const messagesRouter = Router();
 
 /* list */
 messagesRouter.get('/', messagesController.messagesListGet);
-messagesRouter.get('/messages/:id', messagesController.messageGet);
+messagesRouter.get('/messages/:messageId', messagesController.messageGet);
 
 /* Create */
-messagesRouter.get('/new', messagesController.messagesCreateGet);
-messagesRouter.post('new', messagesController.messagesCreatePost);
+messagesRouter.get('/new', messagesController.messageCreateGet);
+messagesRouter.post('/new', messagesController.messageCreatePost);
 
 module.exports = messagesRouter;
