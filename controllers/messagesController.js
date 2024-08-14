@@ -17,7 +17,7 @@ exports.messagesListGet = asyncHandler(async (req, res) => {
 });
 
 exports.messageGet = asyncHandler(async (req, res) => {
-    const messageId = req.params.id;
+    const messageId = req.params.messageId;
     const message = await db.getMessage(messageId);
     if (message) {
         res.render('messageDetails', {
