@@ -11,9 +11,9 @@
     <body>
         <h1><%= title %></h1>
 
-        <h2><a href="/form">New message</a></h2>
+        <h2><a href="/new">New message</a></h2>
 
         <% messages.forEach(function(message, id) { %> <%-
-        include('components/message', {message: message, id: id}) %> <% }) %>
+        include('components/message', {message: message}) %> <% }) %>
     </body>
 </html>

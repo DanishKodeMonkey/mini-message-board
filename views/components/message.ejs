@@ -1,10 +1,8 @@
 <li>
     <hr />
-    <span><%= message.user %></span> <br />
+    <span><%= message.username %></span> <br />
 
-    <span><%= message.added %></span>
-
-    <p><%= message.text %></p>
-    <button><a href="/messages/<%= id %>">Details</a></button>
+    <p><%= message.message %></p>
+    <button><a href="/messages/<%= message.id %>">Details</a></button>
     <hr />
 </li>
