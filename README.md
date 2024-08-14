@@ -10,15 +10,19 @@ The Mini Message Board is a simple web application built using Express and EJS. 
 
     - Display messages on the message board.
     - Submit new messages through a form.
-    - Messages include a username, message text, and the time the message was added.
+    - Messages include a username, and message text.
+
+### Update: postgreSQL implementation
+
+    - Data persistence is now managed through PostgreSQL, allowing for more robust data handling and storage.
 
 ## How It Works
 
     - Express is initialized with EJS designated as the view engine.
     - The user is presented with an index page at localhost:3000/.
-    - The index page is rendered using an EJS template (index.ejs), which receives the messages array - from app.js.
+    - The index page is rendered using an EJS template (index.ejs), which receives the messages from database
     - A separate page with a form is available for submitting new messages.
-    - Upon submission, the new message is added to the messages array and displayed on the message board.
+    - Upon submission, the new message is added to the messages database through query functions thanks to postgresql and the express pg middleware.
 
 ## Conclusion
 
