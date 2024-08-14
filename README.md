@@ -4,7 +4,9 @@ A project to leverage the power of Express and EJS to create a basic message boa
 
 ## Description
 
-The Mini Message Board is a simple web application built using Express and EJS. It allows users to post messages, which are then displayed on a message board. The project uses an array as a pseudo-database to store messages.
+The Mini Message Board is a simple web application built using Express and EJS. It allows users to post messages, which are then displayed on a message board. The project uses an postgreSQL database to store messages.
+
+The repository is purposely split into two branches, one using a pseudo-database array, and one implementing a postgreSQL database! Simply switch branches and have a look!
 
 ## Features
 
@@ -23,6 +25,10 @@ The Mini Message Board is a simple web application built using Express and EJS. 
     - The index page is rendered using an EJS template (index.ejs), which receives the messages from database
     - A separate page with a form is available for submitting new messages.
     - Upon submission, the new message is added to the messages database through query functions thanks to postgresql and the express pg middleware.
+
+
+# Check it out!
+[Check it out here!](https://mini-messageboard-postgres.adaptable.app/)
 
 ## Conclusion
 
